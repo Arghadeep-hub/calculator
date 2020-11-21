@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #00aaff, #00ff6a);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 24vw);
+  grid-template-rows: minmax(120px, auto) repeat(5, 16vh);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+  background-color: #00ff6a;
+  color: #ffffff;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+.clear {
+  color: crimson;
+}
+.clear:hover {
+  color: rgba(255, 255, 255);
+  background-color: crimson !important;
+}
+.eql {
+  color: rgba(4, 0, 255, 0.7);
+}
+.eql:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(4, 0, 255, 0.7) !important;
+}
+.del{
+  color: #00aaff;
+}
+.del:hover{
+  color: #ffffff;
+  background-color: #00aaff !important;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
